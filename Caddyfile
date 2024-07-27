@@ -1,4 +1,4 @@
-localhost {
+:80 {
 	handle /elpa* {
 		file_server {
 			index ''
@@ -11,5 +11,10 @@ localhost {
 			browse
 		}
 	}
-	
+	handle /nongnu* {
+		file_server {
+			index ''
+			browse
+		}
+	}	
 }
