@@ -13,5 +13,8 @@ elpa:
 melpa:
 	$(MAKE) -C melpa/ packages
 
+.PHONY: nongnu
+nongnu:
+	$(MAKE) -C nongnu/ packages
 
 
