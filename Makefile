@@ -1,9 +1,10 @@
 export SHELL := bash
 export RSYNC := rsync
 export RSYNCFLAGS := -avrPh --delete --info=progress2 --exclude="Makefile"
+export DOCKER := sudo docker
 
 .PHONY: all
-all: elpa melpa
+all: elpa melpa nongnu
 
 .PHONY: elpa
 elpa:
@@ -17,4 +18,6 @@ melpa:
 nongnu:
 	$(MAKE) -C nongnu/ packages
 
-
+.PHONY: docker
+docker: Dockerfile
+	$(DOCKER) build -t eiab:latest .
