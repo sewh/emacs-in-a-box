@@ -1,0 +1,15 @@
+localhost {
+	handle /elpa* {
+		file_server {
+			index ''
+			browse
+		}
+	}
+	handle /melpa* {
+		file_server {
+			index ''
+			browse
+		}
+	}
+	
+}
