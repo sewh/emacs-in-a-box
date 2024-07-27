@@ -8,7 +8,8 @@ COPY elpa/Makefile elpa/Makefile
 COPY melpa/Makefile melpa/Makefile
 COPY nongnu/Makefile nongnu/Makefile
 COPY Makefile Makefile
+COPY Caddyfile Caddyfile
 
 RUN make
 
-CMD ['caddy', 'run']
+CMD ["caddy", "run"]
